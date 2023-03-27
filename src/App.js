@@ -11,34 +11,28 @@ import { ThemeProvider } from "styled-components";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 import Navbar from "./Components/Navbar/Navbar";
-import Mainpage from "./Components/HomePage/Mainpage"
-import Container from "./Components/SignUpPage/container/Container"
-import DisplayContent from "./Components/DisplayContent/DisplayContent"
+import Mainpage from "./Components/HomePage/Mainpage";
+import Container from "./Components/SignUpPage/container/Container";
+import DisplayContent from "./Components/DisplayContent/DisplayContent";
+import PlaceOrder from "./Components/PlaceOrder/PlaceOrder";
+import CheckOut from "./Components/CheckOut/Checkout";
+// import CartContextProvider from "./components/CartContext";
+import CartContextProvider from "./Components/CartContext"
 
 const App = () => {
-  
-
   return (
-      <Router>
-        {/* <GlobalStyle /> */}
-        {/* <Header /> */}
-        <Navbar/>
+    <Router>
+      <CartContextProvider>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Mainpage />} />
-          <Route path="/container" element={<Container/>} />
+          <Route path="/container" element={<Container />} />
           <Route path="/DisplayContent" element={<DisplayContent />} />
-
-
-          
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/singleproduct/:id" element={<SingleProduct />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<ErrorPage />} /> */}
+          <Route path="/PlaceOrder/:id" element={<PlaceOrder />} />
+          <Route path="/CheckOut" element={<CheckOut />} />
         </Routes>
-        {/* <Footer /> */}
-      </Router>
+      </CartContextProvider>
+    </Router>
   );
 };
 
