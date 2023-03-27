@@ -1,0 +1,53 @@
+.carousel-img img {
+  height: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.carousel .control-dots {
+  display: none;
+}
+.carousel .thumbs {
+  display: none;
+}
+.carousel .carousel-status {
+  display: none;
+}
+.car_1 {
+  position: relative;
+  text-align: center;
+}
+.heading {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+}
+.car_1 button {
+  position: absolute;
+  left: 30%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px 40px;
+  font-size: 1rem;
+}
+.services {
+  background-color: rgb(246, 248, 250);
+}
+.services h1 {
+  padding-left: 50px;
+  font-size: 2rem;
+  padding-top: 0px;
+  
+}
+
+.services h3 {
+  padding-left: 50px;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  color: rgb(81, 56, 238);
+}

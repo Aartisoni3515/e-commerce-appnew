@@ -1,0 +1,103 @@
+.navbar {
+  padding: 0px 4.8rem;
+  height: 5rem;
+  background-color: rgb(246, 248, 250);
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  }
+  
+  .logo img {
+    width: 160px;
+    height: 80px;
+    margin-left: 20px;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding-right: 100px;
+    
+  }
+  .Home,
+  .About,
+  .Contact, 
+  .cart{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+    display: flex;
+    gap: 4.8rem;
+    align-items: center;
+  }
+  
+  .mobile-menu-icon {
+    display: none;
+  }
+ 
+  @media screen and (max-width: 800px) {
+    .logo {
+      display: flex;
+      position: absolute;
+      top: 15px;
+      left: 35px;
+    }
+    .Contact-1 {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+    .nav-links-mobile {
+      position: absolute;
+      display: block;
+      list-style: none;
+      background-color: rgb(246, 248, 250);
+      left: 0;
+      top: 75px;
+      width: 100%;
+      transition: all 0.5s ease-out;
+      z-index: 1;
+    }
+  
+    .Home,
+    .About,
+    .Contact {
+      text-align: center;
+      font-size: 20px;
+      padding: 32px;
+      width: 100%;
+      transition: all 0.5s ease;
+    }
+    .logo img {
+      margin-top: -11px;
+    width: 195px;
+    height: 66px;
+    margin-left: 4px;
+  }
+    .mobile-menu-icon {
+      display: block;
+      position: absolute;
+      font-size: 3rem;
+      border: none;
+      outline: none;
+      top: 25px;
+      right: 5px;
+      background: transparent;
+    }
+  
+    .image-container {
+      overflow: hidden;
+      flex-direction: row;
+      border: 1px solid rgb(123, 62, 181);
+      height: 20%;
+    }
+  }

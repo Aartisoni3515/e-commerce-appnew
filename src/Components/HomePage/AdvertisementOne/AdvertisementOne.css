@@ -1,0 +1,31 @@
+.AdvertisementOne__main {
+    height: 380px;
+    width: 335px;
+    background: white;
+    margin: 10px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 37%);
+
+
+}
+.ad_OneImage{
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+}
+
+.AdvertisementOne__header {
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: bold;
+    padding:15px;
+}
+.AdvertisementOne__body {
+    height: 60%;
+    padding-left: 15px;
+}
+.AdvertisementOne__body img{
+    height: 60%;
+}
+.AdvertisementOne__footer {
+    padding: 15px;
+}
