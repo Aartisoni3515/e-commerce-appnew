@@ -8,9 +8,13 @@ import Rating from "@mui/material/Rating";
 import Checkout from "../CheckOut/Checkout";
 function PlaceOrder(props) {
   const [product, setProductData] = useState([]);
+  let params = useParams();
+  console.log(params, "params");
 
   useEffect(() => {
-    fetch("https://dummyjson.com/products/1").then((res) => res.json());
+    fetch(`https://dummyjson.com/products/1/${params?.id}`).then((res) =>
+      res.json()
+    );
     //   .then(console.log);
     console.log(setProductData);
   }, []);
@@ -18,6 +22,7 @@ function PlaceOrder(props) {
 
   return (
     <div>
+      <div className="RightSide__main"></div>
       <Grid container key={product.title}>
         <Grid item xs={5}>
           <img className="placeorder__image" src={product.thumbnail} />
@@ -70,9 +75,7 @@ function PlaceOrder(props) {
               <div>
                 {product?.products?.length > 0 &&
                   product?.products?.map((item, index) => (
-                    <Link to={`/` + item.id} key={index}>
-                      <Checkout definition={item} />
-                    </Link>
+                    <Link to={`/` + item.id} key={index}></Link>
                   ))}
               </div>
             </div>
