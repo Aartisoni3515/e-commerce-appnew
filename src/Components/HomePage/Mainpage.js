@@ -79,7 +79,8 @@ const Mainpage = () => {
             >
               {product?.products?.length > 0 &&
                 product?.products?.map((value, index) => (
-                  <Link to="/DisplayContent? category= home" key={index}>
+                  <Link to={"/DisplayContent/"+value?.category} key={index} >
+                  
                     <AdvertisementOne definition={value} />
                   </Link>
                 ))}

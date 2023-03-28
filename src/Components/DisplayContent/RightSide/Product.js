@@ -17,13 +17,12 @@ function Product(props) {
             style={{ fontSize: "20px" }}
             readOnly
           />
-          {props?.definition?.id}
 
-          {/* {props.definition.rating} */}
+          {props.definition.rating}
         </div>
         <div className="product__price">
-          {getSymbolFromCurrency("INR")}
-          {props?.definition?.title}
+          {getSymbolFromCurrency("USD")}
+          {props?.definition?.price}
         </div>
       </div>
     </>
