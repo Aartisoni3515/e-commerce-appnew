@@ -46,7 +46,8 @@
       display: flex;
       position: absolute;
       top: 15px;
-      left: 35px;
+      left: 0px;
+     
     }
     .Contact-1 {
       justify-content: center;
@@ -78,20 +79,21 @@
       transition: all 0.5s ease;
     }
     .logo img {
-      margin-top: -11px;
-    width: 195px;
+      margin-top: -10px;
+    width: 105px;
     height: 66px;
-    margin-left: 4px;
   }
     .mobile-menu-icon {
       display: block;
       position: absolute;
-      font-size: 3rem;
+      font-size: 1.5rem;
       border: none;
       outline: none;
-      top: 25px;
+      top: 0px;
       right: 5px;
       background: transparent;
+      color: black;
+      padding: 20px;
     }
   
     .image-container {

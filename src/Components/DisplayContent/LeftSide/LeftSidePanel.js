@@ -9,13 +9,16 @@ function LeftSidePanel(props) {
             </div>
             <div className="leftSide__brandname">
                 <label className="brandname">
-                    <input type="checkbox" value="Apple" />Apple
+                    <input type="checkbox" value="Apple" />Kitchen
                 </label>
                 <label className="brandname">
-                    <input type="checkbox" value="Samsung" />Samsung
+                    <input type="checkbox" value="Samsung" />Mobiles
                 </label>
                 <label className="brandname">
-                    <input type="checkbox" value="MI" />Mi
+                    <input type="checkbox" value="MI" />Clothes
+                </label>
+                <label className="brandname">
+                    <input type="checkbox" value="MI" />Clothes
                 </label>
             </div>
         </div>

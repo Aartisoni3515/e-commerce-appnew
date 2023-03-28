@@ -1,0 +1,126 @@
+a {
+  text-decoration: none;
+}
+.contact-short {
+  max-width: 60vw;
+  margin: auto;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  background-color: rgb(246, 248, 250);
+  transform: translateY(50%);
+}
+
+footer {
+  padding: 12rem 0 9rem 0;
+  background-color: rgb(10, 20, 53);
+}
+.grid-two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-two h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 2px;
+}
+.hireme-btn {
+  text-decoration: none;
+  background-color: rgb(98, 84, 243);
+  color: rgb(255, 255, 255);
+  padding: 1.4rem 2.4rem;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 1.1rem;
+}
+.hireme-btn a{
+    color: rgb(255, 255, 255);
+
+}
+
+.container-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: rgb(255, 255, 255);
+  padding-bottom: 100px;
+}
+.footer-bottom-section {
+  color: rgb(255, 255, 255);
+}
+
+.footer-bottom-section .grid-two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+.footer-inputs {
+  display: grid;
+}
+.footer-inputs .input-1 {
+  max-width: 15rem;
+  color: rgb(33, 37, 41);
+  padding: 15px 10px;
+  border: 1px solid rgba(98, 84, 243, 0.5);
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 20px;
+}
+.footer-inputs .input-2 {
+  max-width: 10rem;
+  color: rgb(33, 37, 41);
+  border: 1px solid rgba(98, 84, 243, 0.5);
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 20px;
+  padding: 15px 10px;
+  text-align: left;
+  background-color: rgb(98, 84, 243);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.footer-social-icons {
+  display: flex;
+  
+}
+.footer-social h3{
+    text-align: center;
+}
+.footer-social-icons .icons{
+    padding: 1rem;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: 10px;
+}
+@media screen and (max-width:800px) {
+  .grid-two h3{
+    text-align: center;
+    padding-left: 20px;
+  }
+  .hireme-btn {
+    margin: 20px 20px;
+}
+.container-grid{
+  line-height:5rem ;
+}
+.footer-about{
+  line-height: 2rem;
+  text-align: center;
+}
+.footer-subscribe{
+  padding-top: 20px;
+}
+
+.footer-inputs .input-1 {
+  margin-top: 0px;
+}
+.social{
+  display: grid;
+}
+}

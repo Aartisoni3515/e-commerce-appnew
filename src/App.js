@@ -16,8 +16,8 @@ import Container from "./Components/SignUpPage/container/Container";
 import DisplayContent from "./Components/DisplayContent/DisplayContent";
 import PlaceOrder from "./Components/PlaceOrder/PlaceOrder";
 import CheckOut from "./Components/CheckOut/Checkout";
-// import CartContextProvider from "./components/CartContext";
 import CartContextProvider from "./Components/CartContext"
+import Service from "./Components/Services/Service";
 
 const App = () => {
   return (
@@ -30,6 +30,8 @@ const App = () => {
           <Route path="/DisplayContent" element={<DisplayContent />} />
           <Route path="/PlaceOrder/:id" element={<PlaceOrder />} />
           <Route path="/CheckOut" element={<CheckOut />} />
+          <Route path="/Services" element={<Service />} />
+
         </Routes>
       </CartContextProvider>
     </Router>
