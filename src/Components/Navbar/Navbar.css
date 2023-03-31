@@ -82,8 +82,8 @@
       z-index: 1;
     }
     .cart__style{
-      padding-left: 80%;
-      margin-top: 25px;
+      padding-left: 95%;
+      margin-top: 0px;
       list-style: none;
       display: block;
       font-size: 1.5rem;
@@ -134,8 +134,8 @@
 
   @media screen and (max-width:600px) and (min-width:500px) {
     .cart__style {
-      padding-left: 70%;
-      margin-top: 25px;
+      padding-left: 90%;
+      margin-top: 0px;
       list-style: none;
       display: block;
       font-size: 1.5rem;
@@ -148,7 +148,8 @@
 
 @media screen and (max-width:500px) and (min-width:300px) {
   .cart__style {
-    padding-left:50%;
+    padding-left:90%;
+    padding-bottom: 5px;
 
     
 }
@@ -159,7 +160,8 @@
 }
 @media screen and (max-width:400px)  {
   .cart__style {
-    padding-left:45%;
+    padding-left:85%;
+    margin-top: 20px;
 
     
 }
