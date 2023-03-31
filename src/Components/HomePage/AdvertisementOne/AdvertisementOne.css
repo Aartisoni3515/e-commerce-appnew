@@ -4,6 +4,7 @@
   background: white;
   margin: 10px;
   box-shadow: 0px 0px 10px rgb(0 0 0 / 37%);
+  border-radius: 10px;
 }
 
 .ad_OneImage {
@@ -38,3 +39,35 @@
   font-size: 16px;
   font-weight: bolder;
 }
+
+
+
+/* <div class="wrapper">
+  <div class="card"><img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+    <div class="info">
+      <h1>Mountain</h1>
+      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+      <button>Read More</button>
+    </div>
+  </div>
+  
+</div> */
+
+
+.AdvertisementOne__body img{
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.AdvertisementOne__body img:hover {
+  transform: translatex(10px);
+}
+.AdvertisementOne__body img:hover:before {
+  opacity: 1;
+}
+

@@ -7,6 +7,7 @@ function AdvertisementOne(props) {
       <div className="AdvertisementOne__header">{props?.definition?.title}</div>
       <div className="AdvertisementOne__body">
         <img src={props?.definition?.thumbnail} alt="" width="300px" />
+
       </div>
       <div className="AdvertisementOne">
        <p> <span>Category : </span> {props?.definition?.category}</p>

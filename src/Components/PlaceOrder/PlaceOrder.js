@@ -29,22 +29,28 @@ function PlaceOrder(props) {
   const [numcheck, setNumCheck] = useState([]);
 
   let checkStatus = () => {
-    cartItems?.map((item) => {
-      if (product?.id !== item.id) {
-        let nuwAr = [...numcheck];
-        nuwAr.push("true");
-        setNumCheck(nuwAr);
-      }
-    });
+    // cartItems?.map((item) => {
+    //   console.log(item.id,'item id')
+    //   if (product?.id !== item.id) {
+    //     let nuwAr = [...numcheck];
+    //     nuwAr.push("true");
+    //     setNumCheck(nuwAr);
+    //   }
+    // });
+    // console.log(numcheck,'num check',cartItems,'cart check')
 
-    if(!cartItems){
-      return 'not exist'
-    }
-    else {
+    if(cartItems?.includes(product?.id))
+      return 'exist'
+    
+   
 
-    if (numcheck.length === cartItems?.length) return "not exist";
-    return "exist";}
-  };
+    return "not exist";
+   
+    
+  
+  
+  }
+  
 
   const addToCart = () => {
     setcartItems(JSON.parse(window.localStorage.getItem("cartItems")));
@@ -57,21 +63,29 @@ function PlaceOrder(props) {
     window.location.href = "/CheckOut";
   };
 
+
   useEffect(() => {
     if (localitemgot) {
+      console.log(localitemgot,'if condition')
       if (checkStatus() === "not exist") {
         setOrderPLaced("added");
-        let cartt = cart;
-        cartt.push(product);
+        let cartt =cart ;
+        // cartt=product?.id;
+        cartt.push(product?.id);
         window.localStorage.setItem("cartItems", JSON.stringify(cartt));
+
+   
+      
         console.log(cartt);
         toast("Item added to cart");
       } else {
-        toast("Item already exists");
+        toast("Item already exists ");
       }
     }
     setlocalitemsGot("");
   }, [localitemgot]);
+
+
 
   return (
     <>

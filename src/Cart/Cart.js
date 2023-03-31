@@ -3,9 +3,14 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Cart.css";
 import Navbar from "../Components/Navbar/Navbar";
+import CartChild from "./CartChild";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cartItems, setcartItems] = useState([]);
+  const [localitemgot, setlocalitemsGot] = useState("");
+  const [price, setPrice] = useState("");
+
   useEffect(() => {
     if (
       window.localStorage.getItem("cartItems") &&
@@ -16,14 +21,32 @@ const Cart = () => {
   }, []);
 
   const handleRemoveItem = (id) => {
+   console.log(id,'clicked')
+
     let filteredItems = cartItems.filter((c) => {
-      return c.id !== id;
+      return c!== id;
+      // console.log(c,'inside map')
     });
-    setcartItems(filteredItems);
+    // setcartItems(filteredItems);
     window.localStorage.setItem("cartItems", JSON.stringify(filteredItems));
     toast("removed from cart");
+    setlocalitemsGot("got")
+    window.location.reload()
   };
   const showList = true;
+
+
+  useEffect(() => {
+    if(localitemgot){
+    setcartItems(JSON.parse(window.localStorage.getItem("cartItems")));}
+    setlocalitemsGot("")
+
+  }, [localitemgot]);
+
+
+
+
+
   return (
     <>
      <Navbar />
@@ -36,20 +59,14 @@ const Cart = () => {
                 return (
                   <div>
                     {/* <h3  className="div" >noting to show in cart</h3> */}
-                    <div className="item" key={index}>
-                      <img src={c.thumbnail} alt="" />
-                      <div className="info">
-                        <h4>{c.title}</h4>
-                        <p className="quantity">Quantity: 1</p>
-                        <p className="price">${c.price}</p>
-                        <button
-                          onClick={() => handleRemoveItem(c.id)}
-                          className="removeCart"
-                        >
-                          Remove from cart
-                        </button>
-                      </div>
-                    </div>
+                  <CartChild 
+                   index={index}
+                   id={c}
+                   handleRemoveItem={(data)=>handleRemoveItem(data)}
+                   setPrice={setPrice}
+                   price={price}
+
+                  />
                   </div>
                 );
               })}
@@ -58,7 +75,7 @@ const Cart = () => {
             <h4 className="ship">Shipping: FREE</h4>
             <hr />
             <h3 className="total">
-              TOTAL: ${cartItems?.map((c) => c.price).reduce((a, b) => a + b, 0)}
+         <Link to="/products" >  <button  className="removeCart">Shop more</button></Link>
             </h3>
           </div>
         </div>

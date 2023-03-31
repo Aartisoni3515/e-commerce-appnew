@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import getSymbolFromCurrency from "currency-symbol-map";
+import "../RightSide/RightSide.css"
 
 function Product(props) {
   return (

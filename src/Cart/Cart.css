@@ -20,3 +20,17 @@
 	bottom: 50%;
 	right: 2%;
 }
+
+.total .removeCart{
+    background-color: #62c3fc;
+    position: absolute;
+    padding: 2% 2%;
+    color: white;
+    bottom: 20%;
+    right: 10%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
