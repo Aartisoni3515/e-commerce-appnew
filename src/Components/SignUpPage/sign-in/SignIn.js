@@ -12,22 +12,18 @@ const SignIn = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username,
-        password,
+        username: "kminchelle",
+        password: "0lelplR",
       }),
-    }).then((res) => {
-      res.json();
-      window.localStorage.setItem("user", res.json().stringify());
-      console.log(res.json());
-    });
-    navigate("/")
+    })
+      .then((res) => res.json())
+      .then(console.log);
+    navigate("/");
   };
 
-  // atuny0
-  // 9uQFF1Lh
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="main">
         <div className="container">
           <div className="image">
