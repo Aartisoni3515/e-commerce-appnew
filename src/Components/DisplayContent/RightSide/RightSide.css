@@ -1,9 +1,13 @@
+.DisplayContent{
+    display: initial;
+}
 .RightSide__main {
     height: 100%;
-    width: 80vw;
+    width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    /* background-color: wheat; */
+    margin-top: 20px;
 }
 .product {
     width: 228px;
@@ -29,4 +33,10 @@ height: 286px;
     color: #B12704;
     font-size: 20px;
     font-weight: 600;
+}
+@media screen and (max-width:800px) {
+    .DisplayContent{
+        display: initial;
+    }
+    
 }

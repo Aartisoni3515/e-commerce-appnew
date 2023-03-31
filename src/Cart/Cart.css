@@ -1,0 +1,22 @@
+.removeCart{
+    background-color: #62c3fc;
+    position: absolute;
+    padding: 2% 2%;
+    color: white;
+    bottom: 5%;
+    right: 2%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.item .price {
+	background-color: #3FB158;
+	position: absolute;
+	padding: 1% 2%;
+	color: white;
+	bottom: 50%;
+	right: 2%;
+}

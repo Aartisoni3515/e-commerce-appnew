@@ -97,6 +97,7 @@ footer {
     border: 2px solid rgb(255, 255, 255);
     margin-top: 20px;
     margin-left: 10px;
+    font-size: 5rem;
 }
 @media screen and (max-width:800px) {
   .grid-two h3{
@@ -122,5 +123,18 @@ footer {
 }
 .social{
   display: grid;
+}
+
+.contact-short {
+  max-width: 95%;
+ 
+}
+.footer-social-icons .icons{
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.footer-contact{
+  line-height: 2rem;
+  text-align: center;
 }
 }

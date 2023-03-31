@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./RightSide.css";
 import Product from "./Product";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 
 function RightSidePanel(props) {
   const [product, setProductData] = useState([]);
@@ -19,12 +19,14 @@ function RightSidePanel(props) {
     <div className="RightSide__main">
       {product?.products?.length > 0 &&
         product?.products?.map((item, index) => (
-          <Link to={`PlaceOrder/` + item.id} key={index}>
-            <Product definition={item} />
-          </Link>
+          <a href={`PlaceOrder/` + item.id}>
+          <Product definition={item} />
+          </a>
         ))}
     </div>
   );
 }
 
 export default RightSidePanel;
+       
+

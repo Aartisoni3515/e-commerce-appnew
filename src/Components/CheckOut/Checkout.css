@@ -1,21 +1,252 @@
-.checkout__body {
-    background-color: #EAEDED;
-    height: 100vh;
+
+#wrapper {
+	display: flex;
+	table-layout: fixed;
+	width: 100%;
+	height: 100vh;
 }
-.checkout__container {
-    background-color: white;
-    margin: 25px;
-    width: 70vw;
+
+.container1 {
+	background-color: white;
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
+	/* width: 33.333%; */
+	width: 100%;
+
 }
-.textgap {
-    margin: 5px;
+
+.container2 {
+	background-color: #f0f6ff;
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
+	width: 66.666%;
 }
-.placeorder__button {
-    width: 280px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 5px;
-    border: 0px;
-    color: black;
-    background-color: #FFD712;
+
+.order {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.order h2 {
+	font-size: 1.8em;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.item {
+	width: 100%;
+	height: auto;
+	background-color: white;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+	margin-bottom: 4%;
+	overflow: hidden;
+	position: relative;
+}
+
+.item:last-of-type {
+	margin-bottom: 0;
+}
+.item{
+	display: flex;
+}
+
+.item img {
+	display: flex;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-right: 3%;
+}
+
+.item .info {
+	padding: 3%;
+}
+
+.item .quantity {
+	font-size: 0.8em;
+}
+
+.item .price {
+	background-color: #3FB158;
+	position: absolute;
+	padding: 1% 2%;
+	color: white;
+	bottom: 5%;
+	right: 2%;
+}
+
+hr {
+	border-top: 1px solid #A8A8A8;
+}
+
+.ship, .total {
+	margin: 5% 0;
+	text-align: right;
+}
+
+.total {
+	font-size: 1.5em;
+}
+
+.checkout {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.checkout p {
+	display: inline-flex;
+	flex-direction: row;
+	margin-right: 4%;
+}
+
+.checkout p, .checkout i {
+	color: white;
+	font-size: 1.6em;
+}
+
+.checkout i {
+	margin-right: 4%;
+}
+
+.checkout p:last-of-type, .checkout i:nth-of-type(3) {
+	opacity: 0.5;
+}
+
+.payment {
+	background-color: white;
+	width: 100%;
+	height: auto;
+	background-image: url("../../Images/bg.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 70%;
+	margin-top: 3.8%;
+}
+
+.infos {
+	width: 50%;
+	padding: 3% 5% 0 5%;
+}
+
+.infos h2 {
+	color: #000;
+	font-size: 1.8em;
+	margin-bottom: 10%;
+}
+
+.visa, .mastercard, .paypal {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+	width: 25%;
+	height: auto;
+	background-color: white;
+	cursor: pointer;
+	margin-right: 5%;
+	margin-bottom: 10%;
+}
+
+.mastercard, .paypal {
+	opacity: 0.5;
+	transition: 0.3s ease-in-out;
+}
+
+.mastercard:hover,
+.paypal:hover {
+	opacity: 1;
+}
+
+.paypal {
+	margin-right: 0;
+}
+
+.title {
+	color: #242424 !important;
+	opacity: 1 !important;
+	font-size: 1em !important;
+}
+
+input, select {
+	border: none;
+	padding: 2%;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+	margin-top: 2%;
+}
+
+input:focus,
+select:focus {
+	outline: none;
+}
+
+.number {
+	width: 20%;
+	margin-right: 5.3%;
+	margin-bottom: 10%;
+}
+
+.number:last-of-type {
+	margin-right: 0;
+}
+
+.cardHolderName {
+	margin-bottom: 10%;
+}
+
+.cardHolderName input {
+	width: 100%;
+}
+
+select {
+	margin-right: 2%;
+}
+
+select:last-of-type {
+	margin-right: 0;
+}
+
+.expiration, .security {
+	margin-bottom: 10%;
+}
+
+.security input {
+	width: 25%;
+}
+
+.infos button {
+	background-color: #62c3fc;
+	width: 100%;
+	padding: 5%;
+	border: none;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	margin-bottom: 4%;
+}
+
+button:hover {
+	background-color: #C64F46;
+}
+.removeCart{
+	display: flex;
+	justify-content: flex-end;
+	text-align: center;
+	height: 30px;
+	float: right;
+}
+
+@media screen and (max-width:800px) {
+    #wrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+    } 
+    .container1{
+        width: 100%;
+        padding-top: 30px;
+    }
+    .container2{
+        width: 100%;
+        padding-bottom: 50px;
+    }
 }

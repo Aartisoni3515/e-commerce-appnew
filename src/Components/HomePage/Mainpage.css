@@ -1,9 +1,16 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.carousel-img img {
-  height: 600px;
+
+.carousel-img {
+  background-color: rgb(246, 248, 250);
+  height: 700px;
+  width: 100%;
+  margin: 4px auto;
+}
+.carousel-img .car_1 img {
+  height: 700px;
   width: 100%;
   margin: 0 auto;
 }
@@ -33,9 +40,13 @@
   left: 30%;
   top: 55%;
   transform: translate(-50%, -50%);
-  color: white;
-  padding: 10px 40px;
+  background-color: rgb(246, 248, 250);
+
   font-size: 1rem;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 30px;
 }
 .services {
   background-color: rgb(246, 248, 250);
@@ -44,7 +55,6 @@
   padding-left: 50px;
   font-size: 2rem;
   padding-top: 0px;
-  
 }
 
 .services h3 {
@@ -55,12 +65,80 @@
   text-transform: uppercase;
   color: rgb(81, 56, 238);
 }
+.heading-right {
+  position: absolute;
+  left: 60%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: justify;
+}
+.heading-right button {
+  position: absolute;
+  left: 60%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+.car_1 .s-btn {
+  position: absolute;
+  left: 70%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(246, 248, 250);
+  font-size: 1rem;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  text-align: center;
+}
 
-@media screen and (max-width:800px) {
-
+.heading .left-head {
+  padding-left: 30px;
+}
+@media screen and (max-width: 800px) {
   .carousel-img img {
-  height: 300px;
-  width: 100%;
-  margin: 0 auto;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .heading-right {
+    position: absolute;
+    left: 60%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .car_1 .s-btn {
+    position: absolute;
+    left: 70%;
+    top: 60%;
+
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 0.5rem 4rem;
+    text-align: center;
+  }
+
+}
+@media screen and (max-width: 600px) and ( min-width:300px) {
+
+  .car_1 button {
+    position: absolute;
+    left: 30%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(246, 248, 250);
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 30px;
 }
 }
+  

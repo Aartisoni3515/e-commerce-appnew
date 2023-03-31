@@ -7,7 +7,9 @@ import "./Services.css";
 const Service = () => {
   return (
     <>
-      <div className="container">
+
+  
+      <div className="service-container">
       <div className="service-content">
         <h4>Check Now!</h4>
         <h1>Our Services</h1>
@@ -46,7 +48,7 @@ const Service = () => {
 
 {/* ...................................................brand-section......................................................... */}
         <div className="brand-section">
-          <div className="container">
+          <div className="brand-container">
             <h3>Trusted By 1000+ Companies</h3>
             <div className="brand-section-slider">
               {/* my 1st img  */}

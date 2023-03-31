@@ -24,14 +24,14 @@ function Navbar(props) {
             <li>Home</li>
           </Link>
 
-          <Link to="/Services" className="Contact">
-            <li>Services</li>
+          <Link to="/Products" className="Contact">
+            <li>Products</li>
           </Link>
 
           <Link to="/Contact" className="Contact">
             <li>Contact</li>
           </Link>
-          <Link to="/container" className="About">
+          <Link to="/signup" className="About">
             <li>
               {" "}
               <FaUserCircle />
@@ -41,10 +41,17 @@ function Navbar(props) {
           <Link to="/Cart" className="cart">
             <li>
               <FiShoppingCart />
-              <sup>{props.count}</sup>
+              {JSON.parse(window.localStorage.getItem("cartItems"))?.length}
             </li>
           </Link>
         </ul>
+        <li className="cart__style">
+          <span style={{ paddingRight: "94px" }}>
+            {JSON.parse(window.localStorage.getItem("cartItems"))?.length}
+          </span>
+
+          <FiShoppingCart />
+        </li>
 
         <button
           className="mobile-menu-icon "
