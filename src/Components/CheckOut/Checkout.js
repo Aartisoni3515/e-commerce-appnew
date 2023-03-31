@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import "./Checkout.css";
+import Navbar from "../Navbar/Navbar";
 
 const Checkout = () => {
   const [checkOutItems, setcheckOutItems] = useState([]);
@@ -21,6 +22,7 @@ const Checkout = () => {
 
   return (
     <>
+     <Navbar />
       <div id="wrapper">
         <div className="container1">
           <div className="order">

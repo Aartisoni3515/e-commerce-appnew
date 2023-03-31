@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, json, useNavigate } from "react-router-dom";
 import "../SignUp.css";
+import Navbar from "../../Navbar/Navbar";
 const SignUp = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,9 +19,12 @@ const SignUp = () => {
         email,
         password,
       }),
-    }).then((res) => {
+    })
+    .then((res) => {
       res.json();
+
     });
+    
 
 
     navigate("/signin");
@@ -31,6 +35,7 @@ const SignUp = () => {
 
   return (
     <>
+    <Navbar/>
       <div className="signup">
         <div className="main">
           <div className="container">

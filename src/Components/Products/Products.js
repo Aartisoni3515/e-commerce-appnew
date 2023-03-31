@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Data from "../Data";
 import "./Products.css";
+import Navbar from "../Navbar/Navbar";
 
 const Products = () => {
   const [product, setProductData] = useState([]);
@@ -30,6 +31,7 @@ const Products = () => {
 
   return (
     <>
+     <Navbar />
       <div className="products-content">
         <div className="products">
           <Carousel autoPlay={true}>

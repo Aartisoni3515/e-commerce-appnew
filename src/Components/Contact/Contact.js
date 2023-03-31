@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./Contact.css"
+import Navbar from "../Navbar/Navbar";
 
 const Contact = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   return (
     <>
+     <Navbar />
     <div className="main">
         <div className="container">
             <div className="image">

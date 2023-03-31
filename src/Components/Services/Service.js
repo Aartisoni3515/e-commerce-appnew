@@ -3,12 +3,13 @@ import { MdSecurity } from "react-icons/md";
 import { GiReceiveMoney } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import "./Services.css";
+import Navbar from "../Navbar/Navbar";
 
 const Service = () => {
   return (
     <>
 
-  
+<Navbar />
       <div className="service-container">
       <div className="service-content">
         <h4>Check Now!</h4>

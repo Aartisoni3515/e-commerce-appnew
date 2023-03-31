@@ -6,6 +6,7 @@ import Footer from "../Footer/Footer";
 import Service from "../Services/Service";
 import AdvertisementOne from "./AdvertisementOne/AdvertisementOne";
 import "./Mainpage.css";
+import Navbar from "../Navbar/Navbar";
 
 const Mainpage = () => {
   const [product, setProductData] = useState([]);
@@ -26,6 +27,7 @@ const Mainpage = () => {
 
   return (
     <>
+     <Navbar />
       <div className="mainpage">
         <div className="img-header">
           <div className="carousel-img">

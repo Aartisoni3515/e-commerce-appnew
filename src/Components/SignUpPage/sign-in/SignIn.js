@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../SignUp.css";
+import Navbar from "../../Navbar/Navbar";
 
 const SignIn = () => {
   const [username, setUsername] = useState("");
@@ -26,6 +27,7 @@ const SignIn = () => {
   // 9uQFF1Lh
   return (
     <>
+    <Navbar/>
       <div className="main">
         <div className="container">
           <div className="image">

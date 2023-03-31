@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../Navbar/Navbar";
 function PlaceOrder(props) {
   let params = useParams();
   const [product, setProductData] = useState([]);
@@ -22,13 +23,27 @@ function PlaceOrder(props) {
     }
   }, []);
   console.log(product?.products, "products");
+  const [orderplaced, setOrderPLaced] = useState("");
+  const [localitemgot, setlocalitemsGot] = useState("");
+  const [cartItems, setcartItems] = useState([]);
+  const [numcheck, setNumCheck] = useState([]);
+
+  let checkStatus = () => {
+    cartItems.map((item) => {
+      if (product?.id !== item.id) {
+        let nuwAr = [...numcheck];
+        nuwAr.push("true");
+        setNumCheck(nuwAr);
+      }
+    });
+
+    if (numcheck.length === cartItems.length) return "not exist";
+    return "exist";
+  };
 
   const addToCart = () => {
-    let cartt = cart;
-    cartt.push(product);
-    window.localStorage.setItem("cartItems", JSON.stringify(cartt));
-    console.log(cartt);
-    toast("Item added to cart");
+    setcartItems(JSON.parse(window.localStorage.getItem("cartItems")));
+    setlocalitemsGot("got");
   };
   const buyNow = () => {
     let checkOutItems = [];
@@ -37,8 +52,25 @@ function PlaceOrder(props) {
     window.location.href = "/CheckOut";
   };
 
+  useEffect(() => {
+    if (localitemgot) {
+      if (checkStatus() === "not exist") {
+        setOrderPLaced("added");
+        let cartt = cart;
+        cartt.push(product);
+        window.localStorage.setItem("cartItems", JSON.stringify(cartt));
+        console.log(cartt);
+        toast("Item added to cart");
+      } else {
+        toast("Item already exists");
+      }
+    }
+    setlocalitemsGot("");
+  }, [localitemgot]);
+
   return (
     <>
+      <Navbar orderPlaced={orderplaced} setOrderPLaced={setOrderPLaced} />
       <div className="placerder">
         <div className="placeorder" container key={product.title}>
           <div className="place-img">
