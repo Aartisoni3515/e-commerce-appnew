@@ -58,7 +58,7 @@ const Cart = () => {
             <h4 className="ship">Shipping: FREE</h4>
             <hr />
             <h3 className="total">
-              TOTAL: ${cartItems.map((c) => c.price).reduce((a, b) => a + b, 0)}
+              TOTAL: ${cartItems?.map((c) => c.price).reduce((a, b) => a + b, 0)}
             </h3>
           </div>
         </div>

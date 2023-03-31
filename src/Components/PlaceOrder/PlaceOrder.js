@@ -22,14 +22,14 @@ function PlaceOrder(props) {
       setCart(JSON.parse(window.localStorage.getItem("cartItems")));
     }
   }, []);
-  console.log(product?.products, "products");
+  console.log(product, "products");
   const [orderplaced, setOrderPLaced] = useState("");
   const [localitemgot, setlocalitemsGot] = useState("");
   const [cartItems, setcartItems] = useState([]);
   const [numcheck, setNumCheck] = useState([]);
 
   let checkStatus = () => {
-    cartItems.map((item) => {
+    cartItems?.map((item) => {
       if (product?.id !== item.id) {
         let nuwAr = [...numcheck];
         nuwAr.push("true");
@@ -37,8 +37,13 @@ function PlaceOrder(props) {
       }
     });
 
-    if (numcheck.length === cartItems.length) return "not exist";
-    return "exist";
+    if(!cartItems){
+      return 'not exist'
+    }
+    else {
+
+    if (numcheck.length === cartItems?.length) return "not exist";
+    return "exist";}
   };
 
   const addToCart = () => {
@@ -101,13 +106,13 @@ function PlaceOrder(props) {
                 <hr></hr>
                 <div>
                   <div className="textgap">
-                    Price: <span className="pricetag">$ {product.price}</span>
+                    Price: <span className="pricetag">${product.price}</span>
                   </div>
                   <div className="textgap">
-                    FREE delivery: <strong></strong>
+                    FREE delivery: <strong>0</strong>
                   </div>
                   <div className="textgap">
-                    EMI starts at ₹ {product.discountPercentage}. No Cost EMI
+                    EMI starts at ${product.discountPercentage}. No Cost EMI
                     available
                   </div>
                   <div
