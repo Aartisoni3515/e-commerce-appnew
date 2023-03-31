@@ -39,18 +39,10 @@ function PlaceOrder(props) {
     // });
     // console.log(numcheck,'num check',cartItems,'cart check')
 
-    if(cartItems?.includes(product?.id))
-      return 'exist'
-    
-   
+    if (cartItems?.includes(product?.id)) return "exist";
 
     return "not exist";
-   
-    
-  
-  
-  }
-  
+  };
 
   const addToCart = () => {
     setcartItems(JSON.parse(window.localStorage.getItem("cartItems")));
@@ -63,19 +55,16 @@ function PlaceOrder(props) {
     window.location.href = "/CheckOut";
   };
 
-
   useEffect(() => {
     if (localitemgot) {
-      console.log(localitemgot,'if condition')
+      console.log(localitemgot, "if condition");
       if (checkStatus() === "not exist") {
         setOrderPLaced("added");
-        let cartt =cart ;
+        let cartt = cart;
         // cartt=product?.id;
         cartt.push(product?.id);
         window.localStorage.setItem("cartItems", JSON.stringify(cartt));
 
-   
-      
         console.log(cartt);
         toast("Item added to cart");
       } else {
@@ -84,8 +73,6 @@ function PlaceOrder(props) {
     }
     setlocalitemsGot("");
   }, [localitemgot]);
-
-
 
   return (
     <>
@@ -186,15 +173,17 @@ function PlaceOrder(props) {
                       </button>
                       <ToastContainer />
 
-                      {/* <Link to="/CheckOut"> */}
                       <button
                         onClick={() => buyNow()}
                         className="placeorder__button buynow"
                       >
                         Buy Now
                       </button>
-                      {/* </Link> */}
                     </div>
+                    <Link to="/products">
+                      {" "}
+                      <button className="shopmore">Shop more</button>
+                    </Link>
                   </div>
                 </Paper>
               </div>
