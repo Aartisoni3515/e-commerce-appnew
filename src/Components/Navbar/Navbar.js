@@ -3,25 +3,22 @@ import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
 import { CgMenu, CgClose } from "react-icons/cg";
-
 import logo from "../../Images/logo-2.png";
 import "./Navbar.css";
 
-function Navbar({orderPlaced,setOrderPLaced}) {
+function Navbar({ orderPlaced, setOrderPLaced }) {
   const [IsMobile, setIsMobile] = useState(false);
-  
 
+  let numLength = () => {
+    return JSON.parse(window.localStorage.getItem("cartItems"))?.length;
+  };
 
-  let numLength=()=>{
-
-    return JSON.parse(window.localStorage.getItem("cartItems"))?.length
-  }
-
-  useEffect(()=>{
-    numLength()
-    if(orderPlaced){
-    setOrderPLaced('')}
-  },[orderPlaced])
+  useEffect(() => {
+    numLength();
+    if (orderPlaced) {
+      setOrderPLaced("");
+    }
+  }, [orderPlaced]);
   return (
     <>
       <nav className="navbar">
@@ -60,9 +57,7 @@ function Navbar({orderPlaced,setOrderPLaced}) {
           </Link>
         </ul>
         <li className="cart__style">
-          <span style={{ paddingRight: "94px" }}>
-            {numLength()}
-          </span>
+          <span style={{ paddingRight: "94px" }}>{numLength()}</span>
 
           <FiShoppingCart />
         </li>

@@ -27,7 +27,6 @@ const Cart = () => {
       return c!== id;
       // console.log(c,'inside map')
     });
-    // setcartItems(filteredItems);
     window.localStorage.setItem("cartItems", JSON.stringify(filteredItems));
     toast("removed from cart");
     setlocalitemsGot("got")
@@ -50,7 +49,7 @@ const Cart = () => {
   return (
     <>
      <Navbar />
-      {showList ? (
+    
         <div className="cart-container">
           <div className="order">
             <h2>Your Cart summary</h2>
@@ -79,9 +78,6 @@ const Cart = () => {
             </h3>
           </div>
         </div>
-      ) : (
-        <h3> Nothing to show in cart</h3>
-      )}
     </>
   );
 };

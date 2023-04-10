@@ -10,24 +10,19 @@ import Navbar from "../Navbar/Navbar";
 
 const Mainpage = () => {
   const [product, setProductData] = useState([]);
-  // const [loading , setisLoading] = useState(false);
 
- 
   useEffect(() => {
-
     //api call
 
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
       .then(setProductData);
-
-      
   }, []);
   console.log(product?.products, "products");
 
   return (
     <>
-     <Navbar />
+      <Navbar />
       <div className="mainpage">
         <div className="img-header">
           <div className="carousel-img">
@@ -42,7 +37,10 @@ const Mainpage = () => {
                   New Arrivals
                 </h1>
                 <p></p>
-              <Link to="/products"> <button>Shop now</button> </Link>  
+                <Link to="/products">
+                  {" "}
+                  <button>Shop now</button>{" "}
+                </Link>
               </div>
 
               <div className="car_1">
@@ -54,46 +52,50 @@ const Mainpage = () => {
                   Get up to 30% off on Shoes <br />
                   New Arrivals
                 </h1>
-              <Link to="/products"> <button>Shop now</button> </Link>  
-              
+                <Link to="/products">
+                  {" "}
+                  <button>Shop now</button>{" "}
+                </Link>
               </div>
               <div className="car_1">
                 <img
                   src="https://static.zohocdn.com/sites/stock-images/images/zpstock-image-775.jpg"
                   alt=""
                 />
-                  <h1 className="heading">
+                <h1 className="heading">
                   Get up to 30% off on Clothes <br />
                   New Arrivals
                 </h1>
-              <Link to="/products"> <button>Shop now</button> </Link>  
-              
+                <Link to="/products">
+                  {" "}
+                  <button>Shop now</button>{" "}
+                </Link>
               </div>
               <div className="car_1">
                 <img
                   src="https://static.zohocdn.com/sites/stock-images/images/zpstock-image-781.jpg"
                   alt=""
                 />
-                  <h1 className="heading">
+                <h1 className="heading">
                   Get up to 30% off on glasses <br />
                   New Arrivals
                 </h1>
-              <Link to="/products"> <button>Shop now</button> </Link>  
-              
+                <Link to="/products">
+                  {" "}
+                  <button>Shop now</button>{" "}
+                </Link>
               </div>
               <div className="car_1">
                 <img
                   src="https://static.zohocdn.com/sites/stock-images/images/zpstock-image-777.jpg"
                   alt=""
                 />
-                <div  className="left-head">
-                  <h1   style={{textAlign:"right"}} className="heading-right">
-                  Get up to 30% off on 
-                   Laptops and Mobiles 
-                  New Arrivals
-                </h1>
-                <button className="s-btn">Shop now</button>
-              </div>
+                <div className="left-head">
+                  <h1 style={{ textAlign: "right" }} className="heading-right">
+                    Get up to 30% off on Laptops and Mobiles New Arrivals
+                  </h1>
+                  <button className="s-btn">Shop now</button>
+                </div>
               </div>
             </Carousel>
           </div>

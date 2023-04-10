@@ -37,7 +37,6 @@ const Checkout = () => {
                       <p className="quantity">Quantity: 1</p>
                       <p className="price">${c.price}</p>
                     </div>
-                    {/* <button onClick={()=>RemoveItem(c.id)}  className='removeCart' >Remove Item</button> */}
                   </div>
                 );
               })}
