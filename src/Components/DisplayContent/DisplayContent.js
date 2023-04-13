@@ -1,5 +1,4 @@
 import React from "react";
-import LeftSidePanel from "./LeftSide/LeftSidePanel";
 import RightSidePanel from "./RightSide/RightSidePanel";
 import "./RightSide/RightSide.css"
 import Navbar from "../Navbar/Navbar";
@@ -10,7 +9,6 @@ const DisplayContent = () => {
      <Navbar />
       <div className="DisplayContent">
         <div>
-          {/* <LeftSidePanel /> */}
         </div>
         <div>
           <RightSidePanel />
