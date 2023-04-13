@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./PlaceOrder.css";
 import Paper from "@mui/material/Paper";
-import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
+import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../Navbar/Navbar";
@@ -26,21 +26,10 @@ function PlaceOrder(props) {
   const [orderplaced, setOrderPLaced] = useState("");
   const [localitemgot, setlocalitemsGot] = useState("");
   const [cartItems, setcartItems] = useState([]);
-  const [numcheck, setNumCheck] = useState([]);
+  // const [numcheck, setNumCheck] = useState([]);
 
   let checkStatus = () => {
-    // cartItems?.map((item) => {
-    //   console.log(item.id,'item id')
-    //   if (product?.id !== item.id) {
-    //     let nuwAr = [...numcheck];
-    //     nuwAr.push("true");
-    //     setNumCheck(nuwAr);
-    //   }
-    // });
-    // console.log(numcheck,'num check',cartItems,'cart check')
-
     if (cartItems?.includes(product?.id)) return "exist";
-
     return "not exist";
   };
 

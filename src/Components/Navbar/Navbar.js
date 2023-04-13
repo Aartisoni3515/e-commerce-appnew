@@ -56,8 +56,9 @@ function Navbar({ orderPlaced, setOrderPLaced }) {
             </li>
           </Link>
         </ul>
+        
         <li className="cart__style">
-          <span style={{ paddingRight: "94px" }}>{numLength()}</span>
+          <span>{numLength()}</span>
 
           <FiShoppingCart />
         </li>
