@@ -1,0 +1,13 @@
+[
+    {
+     "routes" :"/",
+     "list" : "Home"
+    },
+    {
+     "routes" :"/products",
+     "list" : "Products"
+    }, {
+     "routes" :"/contact",
+     "list" : "Contact"
+    }
+]

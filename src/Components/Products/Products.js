@@ -60,12 +60,7 @@ const Products = () => {
                     <div className="delivery-item">{info.Name3}</div>
                   </div>
                 </div>
-                {/* <div className="data-name">
-                <div  className="delivery-item-title">{info.Name}</div>
-                <div className="delivery-item-title">{info.Name1}</div>
-                <div className="delivery-item-title">{info.Name2}</div>
-                <div className="delivery-item-title">{info.Name3}</div>
-              </div> */}
+
               </div>
             ))}
           </Carousel>

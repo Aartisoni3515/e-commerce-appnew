@@ -7,6 +7,7 @@ import Service from "../Services/Service";
 import AdvertisementOne from "./AdvertisementOne/AdvertisementOne";
 import "./Mainpage.css";
 import Navbar from "../Navbar/Navbar";
+import Data from "../Data";
 
 const Mainpage = () => {
   const [product, setProductData] = useState([]);
@@ -23,9 +24,19 @@ const Mainpage = () => {
   return (
     <>
       <Navbar />
-      <div className="mainpage">
-        <div className="img-header">
+      <div className="">
+        <div className="">
           <div className="carousel-img">
+            {/* <Carousel autoPlay={true}>
+            {Data.map((info, index) => (
+              <div className="header-data">
+              <img className="" src={info.Img} alt="" />
+              <h4>{info.desc}</h4>
+             
+
+              </div>
+            ))}
+          </Carousel> */}
             <Carousel autoPlay={true}>
               <div className="car_1">
                 <img

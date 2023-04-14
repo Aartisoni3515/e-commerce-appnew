@@ -12,11 +12,12 @@ import SignUp from "./Components/SignUpPage/sign-up/SignUp";
 import SignIn from "./Components/SignUpPage/sign-in/SignIn";
 import Cart from "./Cart/Cart";
 import Footer from "./Components/Footer/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const App = () => {
   return (
     <Router>
-       
         <Routes>
 
           <Route path="/" element={<Mainpage />} />
